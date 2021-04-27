@@ -12,5 +12,10 @@ Entering the exciting world of High Level Programming, where we experience stron
 
 1. ``` 0x00-python-hello_world ```
 
-> Getting started with Python.
+Getting started with Python. Formating output and string manipulation.
+
+2. ``` 0x01-python-if_else_loops_functions ```
+
+Loops and flow control using if...else. Functions in python are also introduced here.
+
 
