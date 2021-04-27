@@ -8,7 +8,56 @@ A completion of the source code provided [here](https://alx-intranet.hbtn.io/rlt
 The output of the program is:
 - The number followed by,
 	- if the number is greater than 0: ``` is positive ```
-	- if the number is 0: ``` is zero ``
-	- if the number is less than 0: ```` is negative ```.
+	- if the number is 0: ``` is zero ```
+	- if the number is less than 0: ``` is negative ```.
 - Followed by a new line.
+
+## 1-last_digit.py
+
+A completion of the source code provided [here](https://alx-intranet.hbtn.io/rltoken/hU682hcMxVchqWAcmh32tA) to produce a program that prints the last digit of a randomly generated number stored in the variable ``` number ```.
+The output of the program is:
+- The string ```Last digit of ```, followed by,
+	- the number, followed by
+	- the string ``` is ```, followed by the last digit of ``` number ```, followed by
+		- ``` and is greter than 5 ``` if the last digit is greater than 5
+		- ``` and is 0 ``` if the last digit is 0
+		- ``` and is less than 6 and not 0 ``` if the last digit is less than 6 and not 0.
+- followed by a new line.
+
+## 2-print_alphabet.py
+
+A program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+
+## 3-print_alphabt.py
+
+A program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+- All letters except *q* and *e* are printed.
+
+## 4-print_hexa.py
+
+A program that prints all numbers from *0* to *98* in decimal and in hexadecimal in the form
+- ``` {:d} = 0x{:x} ```
+
+## 5-print_comb2.py
+
+A program that prints numbers from *0* to *99*.
+- Numbers are separated by a comma and a space and printed in ascending order.
+- followed by a new line.
+
+## 6-print_comb3.py
+
+A program that prints all possible combinations of two digits.
+- Numbers are separated by a comma and a space.
+- Only the smallest combination of two digits is printed.
+
+## 7-islower.py
+
+A function that checks for lowercase character.
+- Prototype: ``` def islower(c): ```.
+- Returns ``` True ``` if ``` c ``` is lowercase, ``` False ``` otherwise.
+
+## 8-uppercase.py
+
+A function that prints a string in uppercase followed by a new line.
+- Prototype: ``` def uppercase(str): ```.
 
