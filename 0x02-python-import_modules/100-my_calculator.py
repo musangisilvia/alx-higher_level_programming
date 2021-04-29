@@ -6,20 +6,21 @@ from sys import argv
 if __name__ == "__main__":
     length = len(argv)
     if length != 4:
-        print("Usage: ./100-my_caluclator.py <a> <operator> <b>")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    else:
+    if length == 4:
         operator = argv[2]
         a = int(argv[1])
         b = int(argv[3])
         if operator == "+":
-            print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+            res = add(a, b)
         elif operator == "-":
-            print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
+            res = sub(a, b)
         elif operator == "*":
-            print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
+            res = mul(a, b)
         elif operator == "/":
-            print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
+            res = div(a, b)
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
+        print("{:d} {:s} {:d} = {:d}".format(a, b, operator, res))
