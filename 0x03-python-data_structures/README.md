@@ -36,4 +36,11 @@ This file contains a function that replaces an element in a list at a specific p
 - Prototype: ``` def new_in_list(my_list, idx, element): ```.
 - Return:
 	* A copy of the origin list if idx is negative or less than zero.
+	* The modified copy of the string.
 
+## 5-no_c.py
+
+This file contains a function that removes all characters c and C froma string.
+- Prototype: ``` def no_c(my_string): ```
+- Return:
+	* New string.
