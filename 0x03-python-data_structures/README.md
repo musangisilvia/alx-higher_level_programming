@@ -5,14 +5,22 @@ This project introduces python data structures.
 ## 0-print_list_integer.py
 
 This file conatins a fu nction that prints all integers of a list.
-- Prototype: ``` def print_list_integer(my_list=[]); ```
+- Prototype: ``` def print_list_integer(my_list=[]): ```
 - Format: one line per integer.
 
 ## 1-element_at.py
 
 This file contains a function that retrieves an elemnt from a list.
-- Prototype: ``` def element_at(my_list, idx); ```
+- Prototype: ``` def element_at(my_list, idx): ```
 - Return:
 	* *None* if idx is negative or out of range.
 	* Number retrieved.
+
+## 2-replace_in_list.py
+
+This file contains a function that replaces an element of a list at a specific position.
+- Prototype: ``` def replace_in_list(my_list, idx, element): ```.
+- Return:
+	* Original list if idx is negative or out of range.
+	* Modified list.
 
