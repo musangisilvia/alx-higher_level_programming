@@ -22,3 +22,7 @@ Loops and flow control using if...else. Functions in python are also introduced 
 
 Python modules enhance code reusability. This project explains how modules are created and used to write python scripts.
 
+## 4. 0x03-python-data_structures
+
+Python supports a number of data structures. These include lists, stacks queues, tuples.
+
