@@ -52,3 +52,15 @@ This file conatins a function that prints a matrix of integers.
 - Format: x x x
 	  x x x
 	  x x x
+
+## 7-add_tuple.py
+
+This file contains a function that adds two tuples.
+- Prototype: ``` def add_tuple(tuple_a=(), tuple_b()): ```
+- Return:
+	* A tuple with two integers such that:
+		- The first element is the sum of the first elemeent of each tuple.
+		- The Second element is the sum of the second element of each tuple.
+	* If a tuple is smaller tha 2, value 0 is used for each missing integer.
+	* If a tuple is bigger than 2, only the first two integers are used.
+
