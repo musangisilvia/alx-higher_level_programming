@@ -24,9 +24,16 @@ This file contains a function that replaces an element of a list at a specific p
 	* Original list if idx is negative or out of range.
 	* Modified list.
 
-
 ## 3-print_reversed_list_integer.py
 
-Thsi file contains a function that prints all integers of a a list, in reverse order.
+This file contains a function that prints all integers of a a list, in reverse order.
 - Prototype: ``` def print_reversed_list_integer(my_list=[]):
 - Format: one integer per line.
+
+## 4-new_in_list.py
+
+This file contains a function that replaces an element in a list at a specific position without modifying the original list.
+- Prototype: ``` def new_in_list(my_list, idx, element): ```.
+- Return:
+	* A copy of the origin list if idx is negative or less than zero.
+
