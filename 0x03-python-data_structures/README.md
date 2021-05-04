@@ -6,7 +6,7 @@ This project introduces python data structures.
 
 This file conatins a fu nction that prints all integers of a list.
 - Prototype: ``` def print_list_integer(my_list=[]): ```
-- Format: one line per integer.
+- Format: one integer per line.
 
 ## 1-element_at.py
 
@@ -24,3 +24,9 @@ This file contains a function that replaces an element of a list at a specific p
 	* Original list if idx is negative or out of range.
 	* Modified list.
 
+
+## 3-print_reversed_list_integer.py
+
+Thsi file contains a function that prints all integers of a a list, in reverse order.
+- Prototype: ``` def print_reversed_list_integer(my_list=[]):
+- Format: one integer per line.
