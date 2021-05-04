@@ -44,3 +44,11 @@ This file contains a function that removes all characters c and C froma string.
 - Prototype: ``` def no_c(my_string): ```
 - Return:
 	* New string.
+
+## 6-print_matrix_integer.py
+
+This file conatins a function that prints a matrix of integers.
+- Prototype: ``` def print_matrix_integer(matrix=[[]]): ```
+- Format: x x x
+	  x x x
+	  x x x
