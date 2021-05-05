@@ -42,10 +42,17 @@ puzzle, followed by a new line.
 > A python script that prints *The Zen of Python", by TimPeters* followed by a new line.
 
 ## 10-check_cycle.c
+This is a technical interview question. 
+The solution is checked for efficiency of the algorithm used.
 > A function in C that checks for a cycle in a singly linked list.
 
 ### lists.h
-> A header file utilised by 10-check_cycle.c.
+ > A header file utilised by 10-check_cycle.c.
 
 ## 100-write.py
+> A pythone script that prints exactly ``` and that piece of art is useful - Dora Korpar, 2015-10-19 ``` followed by anew line, using te function write from the sys module.
+
+## 101-compile 
+> A script that compiles a python script file.
+> Python file name is store in te environment variable ``` $PYFILE ``` and the output file name has to be ``` $PYFILEc ```.
 
