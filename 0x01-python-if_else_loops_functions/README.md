@@ -61,3 +61,37 @@ A function that checks for lowercase character.
 A function that prints a string in uppercase followed by a new line.
 - Prototype: ``` def uppercase(str): ```.
 
+## 9-print_last_digit.py
+
+A function that prints the last digit of a number.
+- Prototype: ``` def print_last_digit(numer): ```
+- Return: value of the last digit
+
+## 10-add.py
+
+A function that adds two integers and returns teh result.
+- Prototype: ``` def add(a, b): ```
+- Return: ``` a + b ```.
+
+## 11-pow.py
+
+A function that computes *a* to the power of *b* and return the value.
+- Prototype: ``` def pow(a, b): ```.
+- Return: ``` a ^ b ```.
+
+## 12-fizzbuzz.py
+
+A function that prints the numbers 1 to 100 separated by a space.
+- Prototype: ``` def fizzbuzz(): ```.
+- For multiple of three and five, ``` FizzBuzz ``` is printed instead.
+- For multiples of three, ``` Fizz ``` is printed instead.
+- For multiples of five, ``` Buzz ``` is printed instead.
+
+## *TECHNICAL INTERVIEW QUESTION*
+
+## 13-insert_number.c
+
+A function in C that inserts a number into a sorted singly linked list.
+- Prototype: ``` listint_t *insert_node(listint_t **head, int number); ```
+- Return: the address of the new node or NULL if it failed.
+
