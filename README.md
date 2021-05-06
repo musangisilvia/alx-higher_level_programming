@@ -26,3 +26,7 @@ Python modules enhance code reusability. This project explains how modules are c
 
 Python supports a number of data structures. These include lists, stacks queues, tuples.
 
+## 5. 0x04-python-more_data_structures
+
+More data structures in python are sets and dictionaries. In built function introduced here include map, filter, lambda anonymous functions.
+
