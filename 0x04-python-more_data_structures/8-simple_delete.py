@@ -1,4 +1,4 @@
-#!/usr/bun/python3
+#!/usr/bin/python3
 
 
 # simple_delete - delets a key in a dictionary.
