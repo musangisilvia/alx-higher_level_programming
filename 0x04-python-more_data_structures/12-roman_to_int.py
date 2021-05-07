@@ -3,38 +3,19 @@
 
 # roman_to_int - converts a roman numeral to an integer.
 def roman_to_int(roman_string):
-    if roman_string:
+    romans = {'I': 1, 'V': 5, 'X': 10, 'L':50, 'C': 100, 'D': 500, 'M': 1000,\
+	    'IV': 4, 'IX': 9, 'XL': 40, 'XC': 90, 'CD': 400, 'CM': 900}
+
+    if roman_string and type(roman_string) == str:
         num = 0
-        if roman_string is "IV":
-            return 4
-        elif roman_string is "IX":
-            return 9
-        elif roman_string is "XL":
-            return 40
-        elif roman_string is "XC":
-            return 90
-        elif roman_string is "CD":
-            return 400
-        elif roman_string is "CM":
-            return 900
-        else:
-            for i in roman_string:
-                if i == 'M':
-                    num += 1000
-                elif i == 'D':
-                    num += 500
-                elif i == 'C':
-                    num += 100
-                elif i == 'L':
-                    num += 50
-                elif i == 'X':
-                    num += 10
-                elif i == 'V':
-                    num += 5
-                elif i == 'I':
-                    num += 1
-                else:
-                    return 0
-            return num
+        for i in range(len(roman_string)):
+            for j in romans.keys():
+                if roman_string[:] is j:
+                    num = romans[j]
+                    return num
+                if roman_string[i:i+1] is j:
+                    num += romans[j]
+                    break
+        return num
     else:
         return 0
