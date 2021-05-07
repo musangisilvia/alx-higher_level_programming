@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 
 # complex_delete - delets keys with a specific value in a dictionary.
