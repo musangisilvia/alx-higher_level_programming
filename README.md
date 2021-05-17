@@ -30,3 +30,6 @@ Python supports a number of data structures. These include lists, stacks queues,
 
 More data structures in python are sets and dictionaries. In built function introduced here include map, filter, lambda anonymous functions.
 
+## 6. 0x05-python-exceptions
+
+An exception is an error detected during execution. Python offers a variety of builtin exceptions and also allows for custom exceptions.
