@@ -5,8 +5,8 @@
 class Square():
     """
         Square: defines a square.
-	Attributes:
-	        size (no type or value identification): size of square.
+        Attributes:
+            size (no type or value identification): size of square.
         Method:
                 __init__ : init of size attribute for each instance.
     """
