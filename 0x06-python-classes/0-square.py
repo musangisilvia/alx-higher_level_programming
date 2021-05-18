@@ -1,10 +1,8 @@
 #!/usr/bin/python3
+""" Module contains an empty class Square."""
 
-""" 
-   Module contains an empty class Square. 
-"""
+
 class Square:
-    """
-        This is an empty class.
-    """
+    """ This is an empty class. """
     pass
+
