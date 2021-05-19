@@ -11,7 +11,7 @@ class Square():
                 __init__ : init of size attribute for each instance.
     """
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
 
         """ Initialization of attributes for instances
             Args:
@@ -28,7 +28,7 @@ class Square():
 
     @property
     def size(self):
-        """ getter function for private attribute size. 
+        """ getter function for private attribute size.
             Returns:
                 size.
         """
@@ -36,7 +36,7 @@ class Square():
 
     @size.setter
     def size(self, value):
-        """ setter function for private attribute size. 
+        """ setter function for private attribute size.
             Args:
                 value: size value to set to
         """
