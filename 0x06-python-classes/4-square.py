@@ -25,7 +25,7 @@ class Square():
 
     @property
     def size(self):
-        """ getter function for private attribute size. 
+        """ getter function for private attribute size.
             Returns:
                 size.
         """
@@ -33,10 +33,10 @@ class Square():
 
     @size.setter
     def size(self, value):
-        """ setter function for private attribute size. 
+        """ setter function for private attribute size.
             Args:
                 value: value to be set.
-	    Returns:
+            Returns:
                 nothing
         """
         if not (isinstance(value, int)):
