@@ -58,6 +58,11 @@ Traceback (most recent call last):
         ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+Check for +ve infinity
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, float("inf"))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
 Check for one argument missing
 >>> matrix = [[1, 2, 3]]
 >>> matrix_divided(matrix)
