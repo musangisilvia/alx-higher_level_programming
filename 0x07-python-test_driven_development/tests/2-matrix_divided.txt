@@ -57,3 +57,16 @@ Check for list with wrong elements
 Traceback (most recent call last):
         ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Check for one argument missing
+>>> matrix = [[1, 2, 3]]
+>>> matrix_divided(matrix)
+Traceback (most recent call last):
+	...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Check for both arguments missing
+>>> matrix_divided()
+Traceback (most recent call last):
+	...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
