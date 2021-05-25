@@ -49,4 +49,7 @@ The *doctest* module searches or pieces of text that lok like interactive Python
 
 More class example tasks in Python.
 
+## 10. 0x09-python-everything_is_object
+
+Pyton works differently with different types of objects. It is necessary to understand the reason why this is so.
 
