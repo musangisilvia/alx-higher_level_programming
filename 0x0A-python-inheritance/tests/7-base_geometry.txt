@@ -5,7 +5,7 @@
 >>> bg.area()
 Traceback (most recent call last):
 	...
-AttributeError: area() is not implemented
+Exception: area() is not implemented
 
 >>> bg.integer_validator("Silvia", 20)
 
