@@ -1,0 +1,47 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+	...
+AttributeError: area() is not implemented
+
+>>> bg.integer_validator("Silvia", 20)
+
+Check when value is not an int
+
+>>> bg.integer_validator("Silvia", "hi")
+Traceback (most recent call last):
+	...
+TypeError: Silvia must be an integer
+
+
+Check when value is less than or equal to zero
+>>> bg.integer_validator("Silvia", -9)
+Traceback (most recent call last):
+	...
+ValueError: Silvia must be greater than 0
+
+Check when value is too large (inf)
+>>> bg.integer_validator("Silvia", float("inf"))
+Traceback (most recent call last):
+	...
+TypeError: Silvia must be an integer
+
+Check when no argument is passed
+>>> bg.integer_validator()
+Traceback (most recent call last):
+	...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Check when one argument is passed
+>>> bg.integer_validator("Silvia")
+Traceback (most recent call last):
+	...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator(9)
+Traceback (most recent call last):
+	...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
