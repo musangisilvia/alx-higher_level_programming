@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    6-base_geometry: class BaseGeometry
+    7-base_geometry: class BaseGeometry
 """
 
 
