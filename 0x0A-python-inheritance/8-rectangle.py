@@ -2,6 +2,8 @@
 """
     8-rectangle: class Rectangle from BaseGeomerty
 """
+
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
@@ -15,8 +17,8 @@ class Rectangle(BaseGeometry):
             __init__ - initialises the Rectangle.
     """
     def __init__(self, width, height):
-        self.integer_validator("Width", width)
-        self.integer_validator("Height", height)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
 
-        self.__width__ = width
-        self.__height__ = height
+        self.__width = width
+        self.__height = height
