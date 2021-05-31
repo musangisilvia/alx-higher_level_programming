@@ -53,3 +53,12 @@ More class example tasks in Python.
 
 Pyton works differently with different types of objects. It is necessary to understand the reason why this is so.
 
+## 11. 0x0A-Python - Inheritance
+
+Inheritance is the procedure in which one class inherits the attributes and methods of another class.
+In python 3, if there is no explicit superclass provided, a class will automatically inherit from object. 
+The key terms in inheritance are:
+- Superclass / Parent class: a class being inherited from.
+- Subclass: a class inheriting from a superclass. It may be said to be derived from te parent or extends from te parent.
+
+This project outlines some of the ways inheritance is implemented in Python.
