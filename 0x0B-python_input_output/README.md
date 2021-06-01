@@ -81,3 +81,21 @@ A class ``` Student ``` that defines a student by: (based on ``` 9-student.py ``
 - Public method ``` def to_json(self, attrs=None): ``` that retrieves a dictonary representation of a ```Student ``` instance.
 	* If ``` attrs ``` is a list of strings, only attribute names contained in this list are retrieved.
 	* Otherwise, all attributes are retrieved.
+
+## 11-student.py
+
+A class ``` Student ``` that defines a student by: (based on ``` 10-student.py ```)
+
+- Public instance attributes:
+	* ``` first_name ```
+	* ``` last_name ```
+	* ``` age ```
+- Instantiation with ``` first_name ```, ``` last_name ``` and ``` age ```: ``` def __init__(self, first_name, last_name, age): ```.
+- Public method ``` def to_json(self, attrs=None): ``` that retrieves a dictonary representation of a ```Student ``` instance.
+        * If ``` attrs ``` is a list of strings, only attribute names contained in this list are retrieved.
+        * Otherwise, all attributes are retrieved.
+- Public method ``` def reload_from_json(self, json): ``` that replaces all attributes of the Student instance:
+	* Assumption: ``` json ``` will always be a dictionary.
+	* A dictionary key will be the public attribute name.
+	* A dictionary value will be the value of the public attribute.
+
