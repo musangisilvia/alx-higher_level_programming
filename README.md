@@ -62,3 +62,9 @@ The key terms in inheritance are:
 - Subclass: a class inheriting from a superclass. It may be said to be derived from te parent or extends from te parent.
 
 This project outlines some of the ways inheritance is implemented in Python.
+
+## 12. 0x0B-Python - Input/Output
+
+There are several ways to presebt the output of a program ie In human-readable form or writing to a file for future use.
+While we've already encountered ``` print() ``` and ``` write() ```, there are functions that python offers that add to these. These functions work directly with either text or binary files.
+
