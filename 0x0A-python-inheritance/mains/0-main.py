@@ -10,8 +10,6 @@ class MyClass2(object):
         pass
 
 print(lookup(MyClass1))
-print(type(lookup(MyClass1)))
-print("---------------------------------------------------------")
 print(lookup(MyClass2))
 
 print(lookup(int))
