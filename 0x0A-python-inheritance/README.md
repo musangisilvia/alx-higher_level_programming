@@ -91,3 +91,16 @@ A class ``` Square ``` that inherits from ``` Rectangle ``` (9-rectangle.py):
 	* ``` size ``` must be a positive integer, validated by ``` integer validator ```.
 - the ``` area() ``` method is implemented.
 - ``` print() ``` should print, and ``` str() ``` return the following rectangle description:``` [Square] <width>/<height> ```.
+
+## 100-my_int.py
+
+A class ``` MyInt ``` that inherits from ``` int ```:
+
+- ``` MyInt ``` has ``` ==``` and ``` != ``` inverted
+
+## 101-add_attribute.py
+
+A function that adds a new attribute to an object if its possible.
+
+- A ``` TypeError ``` exception with the message ``` can't add new attribute ``` is raised when the object can't have the new attribute.
+
