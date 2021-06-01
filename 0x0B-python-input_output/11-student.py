@@ -43,4 +43,5 @@ class Student:
             Args:
                 json (dictionary): reload data.
         """
-        self.__dict__ = json
+        for key, value in json.items():
+            self.__setattr__(key, value)
