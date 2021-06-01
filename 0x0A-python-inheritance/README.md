@@ -61,3 +61,33 @@ A class ``` Rectangle ``` that inherits from ``` BaseGeometry ``` (7-base_gometr
 	* ``` width ``` and ``` height ``` must be private. No getter or setter.
 	* ``` width ``` and ``` height ``` must be positive integers, validated by integer_validator.
 
+
+## 9-rectangle.py
+
+A class ``` Rectangle ``` that inherits from ``` BaseGeometry ``` (7-base_gometry.py)
+
+- Instantiation with ``` width ``` and ``` height ```: ``` def __init__(self, width, height):     ```:
+         * ``` width ``` and ``` height ``` must be private. No getter or setter.
+	 * ``` width ``` and ``` height ``` must be positive integers, validated by integer_validator.
+- the ``` area() ``` method has been implemented.
+- ``` print() ``` should print, and ``` str() ``` return the following rectangle description: ``` [Rectangle] <width>/<height> ```.
+
+
+## 10-square.py
+
+A class ``` Square ``` that inherits from ``` Rectangle ``` (9-rectangle.py):
+
+- Instantiation with ``` size: def __init__(self, size): ```
+	* ``` size ``` must be private. No getter or setter.
+	* ``` size ``` must be a positive integer, validated by ``` integer validator ```.
+- the ``` area() ``` method is implemented.
+
+## 11-square.py
+
+A class ``` Square ``` that inherits from ``` Rectangle ``` (9-rectangle.py):
+
+- Instantiation with ``` size: def __init__(self, size): ```
+	* ``` size ``` must be private. No getter or setter.
+	* ``` size ``` must be a positive integer, validated by ``` integer validator ```.
+- the ``` area() ``` method is implemented.
+- ``` print() ``` should print, and ``` str() ``` return the following rectangle description:``` [Square] <width>/<height> ```.
