@@ -68,3 +68,21 @@ This project outlines some of the ways inheritance is implemented in Python.
 There are several ways to presebt the output of a program ie In human-readable form or writing to a file for future use.
 While we've already encountered ``` print() ``` and ``` write() ```, there are functions that python offers that add to these. These functions work directly with either text or binary files.
 
+
+## 12. 0x0C-python-almost_a_circle
+
+This project reviews everything about Python:
+
+	- Import
+	- Exceptions
+	- Class
+	- Private attribute
+	- Getter/Setter
+	- Class method
+	- Static method
+	- Inheritance
+	- Unittest
+	- Read/Write file
+	- args and kwargs
+	- Serialization/Deserialization
+	- JSON
