@@ -21,6 +21,11 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.id, 2)
         self.assertEqual(r3.id, 12)
 
+    def test_area(self):
+        self.assertEqual(r1.area(), 20)
+        self.assertEqual(r2.area(), 20)
+        self.assertEqual(r3.area(), 20)
+
     def test_raises(self):
         self.assertRaises(TypeError)
         self.assertRaises(ValueError)
