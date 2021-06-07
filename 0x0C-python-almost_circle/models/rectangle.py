@@ -160,10 +160,10 @@ class Rectangle(Base):
 
 #        print("{}".format(rectangle))
 
-        print("\n" * self.__y, end="")
+        print("\n" * self.y, end="")
 
-        for i in range(self.__height):
-            rectangle += (" " * self.__x) + (print_symbol*self.__width) + "\n"
+        for i in range(self.height):
+            rectangle += (" " * self.x) + (print_symbol*self.width) + "\n"
         print(rectangle, end="")
 
     def __str__(self):
@@ -174,10 +174,19 @@ class Rectangle(Base):
                                                 self.__x, self.__y,
                                                 self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
-            assigns an argument to each attribute
+            assigns key/value argument to attributes
+            kwargs is skipped if args is not empty
+            Args:
+                *args -  variable number of no-keyword args
+                **kwargs - variable number of keyworded args
         """
+        if len(args) == 0:
+            for key, val in kwargs.items():
+                self.__setattr__(key, val)
+            return
+
         try:
             self.id = args[0]
             self.width = args[1]
@@ -186,3 +195,11 @@ class Rectangle(Base):
             self.y = args[4]
         except IndexError:
             pass
+
+    def to_dictionary(self):
+        """
+            returns the dictionary repr of a rect
+        """
+        return {'x': getattr(self, "x"), 'y': getattr(self, "y"),
+                'id': getattr(self, "id"), 'height': getattr(self, "height"),
+                'width': getattr(self, "width")}
