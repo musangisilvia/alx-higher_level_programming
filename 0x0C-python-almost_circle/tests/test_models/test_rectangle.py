@@ -183,3 +183,33 @@ class TestRectangle(unittest.TestCase):
         """
         with self.assertRaises(ValueError):
             r1 = Rectangle(1, 2, 4, -7)
+
+    def test_area(self):
+        """
+            Testing the rectangle area
+        """
+        r1 = Rectangle(12, 2)
+        self.assertEqual(r1.area(), 24)
+
+    def test_update_args(self):
+        """
+            Testing the update function with non-keyword args
+        """
+        r1 = Rectangle(10, 1)
+        r1.update(12)
+        self.assertEqual(12, r1.id)
+
+    def test_update_kwargs(self):
+        """
+            Testing update function with keyword args
+        """
+        r1 = Rectangle(1, 2)
+        r1.update(height=12)
+        self.assertEqual(12, r1.height)
+
+    def test_override_str(self):
+        """
+            Testing override str.
+       """
+        r1 = Rectangle(1, 2, 3, 4, 76)
+        self.assertEqual("[Rectangle] (76) 3/4 - 1/2", r1.__str__())
