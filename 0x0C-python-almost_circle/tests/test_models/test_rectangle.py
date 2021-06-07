@@ -50,3 +50,136 @@ class TestRectangle(unittest.TestCase):
         self.r.y = 2
         self.assertEqual(2, self.r.y)
         self.assertEqual(0, self.r.x)
+
+    def test_rectangle_id(self):
+        """
+            Testing the id of the rectangle
+        """
+        r1 = Rectangle(1, 3, 0, 0, 12)
+        self.assertEqual(12, r1.id)
+
+    def test_width_str(self):
+        """
+            Testing wrong type for width: str
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle("w", 5)
+
+    def test_width_list(self):
+        """
+            Testing wrong type for width: list
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle([1, 2], 8)
+
+    def test_width_bool(self):
+        """
+            Testing wrong type for width: boolean
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(True, 9)
+
+    def test_height_str(self):
+        """
+            Testing wrong type for height: str
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(4, "h")
+
+    def test_height_list(self):
+        """
+            Testing wrong type for height: list
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(8, [1, 2])
+
+    def test_height_bool(self):
+        """
+            Testing wrong type for height: boolean
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(9, True)
+
+    def test_x_str(self):
+        """
+            Testing wrong type for x: str
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, "x", 0)
+
+    def test_x_list(self):
+        """
+            Testing wrong type for x: list
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, [1, 2], 8)
+
+    def test_x_bool(self):
+        """
+            Testing wrong type for x: boolean
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, True, 9)
+
+    def test_y_str(self):
+        """
+            Testing wrong type for y: str
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, 0, "y")
+
+    def test_y_list(self):
+        """
+            Testing wrong type for y: list
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, 6, [1, 2])
+
+    def test_y_bool(self):
+        """
+            Testing wrong type for y: boolean
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, 9, True)
+
+    def test_width_negative(self):
+        """
+            Testing negative value for width
+        """
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(-2, 8)
+
+    def test_width_zero(self):
+        """
+            Testing zero value for width
+        """
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(0, 8)
+
+    def test_height_negative(self):
+        """
+            Testing negative vale fro height
+        """
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(8, -2)
+
+    def test_height_zero(self):
+        """
+            Testing zero value for height
+        """
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(8, 0)
+
+    def test_x_negative(self):
+        """
+            Testing negative value for x
+        """
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(1, 2, -1, 0)
+
+    def test_y_negative(self):
+        """
+            Testing negative value for y
+        """
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(1, 2, 4, -7)
