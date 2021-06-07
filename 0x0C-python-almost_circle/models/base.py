@@ -3,6 +3,7 @@
     contains a class Base.
 """
 import json
+import csv
 
 
 class Base:
@@ -99,3 +100,56 @@ class Base:
             instances.append(temp)
 
         return instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+            serializes in CSV and saves in a file
+        """
+        fname = cls.__name__ + ".csv"
+
+        with open(fname, "w", newline='') as cfile:
+            writer = csv.writer(cfile)
+
+        if cls.__name__ == "Rectangle":
+            for obj in list_objs:
+                string = ""
+                obj = obj.to_dictionary()
+                string += (str(obj["id"]) + "," +
+                           str(obj["width"]) + "," +
+                           str(obj["height"]) + "," +
+                           str(obj["x"]) + "," +
+                           str(obj["y"]))
+                writer.writerow(string)
+
+        if cls.__name__ == "Square":
+            for obj in list_objs:
+                string = ""
+                obj = obj.to_dictionary()
+                string += (str(obj["id"]) + "," +
+                           str(obj["width"]) + "," +
+                           str(obj["x"]) + "," +
+                           str(obj["y"]))
+                writer.writerow(string)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+            deserializes from CSV from a file.
+        """
+        fname = cls.__name__ + ".json"
+
+        try:
+            with open(fname, "r") as cfile:
+                reader = csv.reader(cfile)
+        except:
+            return []
+
+        instances = []
+        for instance in reader:
+            temp = cls.create(**instance)
+            instances.append(temp)
+
+        return instances
+
+
