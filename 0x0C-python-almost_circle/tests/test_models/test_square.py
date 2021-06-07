@@ -1,5 +1,5 @@
 """
-    unit test for models/rectangle.py
+    unit test for models/square.py
 """
 
 import unittest
