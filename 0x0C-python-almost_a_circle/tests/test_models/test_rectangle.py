@@ -1,7 +1,7 @@
 """
     unit test for models/rectangle.py
 """
-
+import json
 import unittest
 from models.rectangle import Rectangle
 
@@ -184,6 +184,34 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r1 = Rectangle(1, 2, 4, -7)
 
+    def test_width_float(self):
+        """
+            testing for float
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1.07, 5)
+
+    def test_height_float(self):
+        """
+            testing for float
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(5, 1.07)
+
+    def test_x_float(self):
+        """
+            testing for float
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(5, 8, 1.07)
+
+    def test_y_float(self):
+        """
+            testing for float
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(5, 5, 8, 1.07)
+
     def test_area(self):
         """
             Testing the rectangle area
@@ -191,25 +219,87 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(12, 2)
         self.assertEqual(r1.area(), 24)
 
-    def test_update_args(self):
+    def test_update_id(self):
         """
-            Testing the update function with non-keyword args
+            Testing the update id
         """
         r1 = Rectangle(10, 1)
         r1.update(12)
         self.assertEqual(12, r1.id)
 
-    def test_update_kwargs(self):
+    def test_update_width(self):
         """
-            Testing update function with keyword args
+            Testing update width
         """
         r1 = Rectangle(1, 2)
-        r1.update(height=12)
-        self.assertEqual(12, r1.height)
+        r1.update(2, 12)
+        self.assertEqual(12, r1.width)
 
-    def test_override_str(self):
+    def test_update_height(self):
+        """
+            Testing update height
+        """
+        r1 = Rectangle(1, 3)
+        r1.update(2, 3, 4)
+        self.assertEqual(4, r1.height)
+
+    def test_update_x(self):
+        """
+            Testing update x
+        """
+        r1 = Rectangle(1, 2)
+        r1.update(2, 3, 4, 5)
+        self.assertEqual(5, r1.x)
+
+    def test_update_y(self):
+        """
+            Testing update y
+        """
+        r1 = Rectangle(1, 2)
+        r1.update(2, 3, 4, 5, 6)
+        self.assertEqual(6, r1.y)
+
+    def test_update_dict(self):
+        """
+            Testing teh update method with kwargs
+        """
+        r1 = Rectangle(1, 3)
+        r1.update(id=3, height=5, width=6, x=7, y=9)
+        self.assertEqual(6, r1.width)
+
+    def test_to_dict(self):
+        """
+            Testing to dict function return type
+        """
+        r1 = Rectangle(1, 2)
+        self.assertEqual(type(r1.to_dictionary()), dict)
+
+    def test_to_dict_value(self):
+        """
+            Testing the dict function actual return value
+        """
+        r1 = Rectangle(1, 2, 0, 0, 345)
+        r1_dict = r1.to_dictionary()
+        self.assertEqual(r1_dict,
+                         {'height': 2, 'width': 1, 'id': 345, 'x': 0, 'y': 0})
+
+    def test_missing_width(self):
+        """
+            Testing instance creation with no width value
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle()
+
+    def test_missing_height(self):
+        """
+            Testing instance creation with no height value
+        """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1)
+
+    def test_overload_str(self):
         """
             Testing override str.
-       """
+        """
         r1 = Rectangle(1, 2, 3, 4, 76)
         self.assertEqual("[Rectangle] (76) 3/4 - 1/2", r1.__str__())
