@@ -3,6 +3,8 @@
 """
 import unittest
 from models.base import Base
+from models.square import Square
+import json
 
 
 class TestBaseClass(unittest.TestCase):
@@ -64,3 +66,36 @@ class TestBaseClass(unittest.TestCase):
         """
         b = Base({'id': 12})
         self.assertEqual({'id': 12}, b.id)
+
+    def test_to_json_type(self):
+        """
+           test to_json type
+        """
+        sq = Square(9)
+        json_dict = sq.to_dictionary()
+        json_string = Base.to_json_string([json_dict])
+        self.assertEqual(type(json_string), str)
+
+    def test_to_json_value(self):
+        """
+             Test to json value (string)
+        """
+        sq = Square(1, 0, 0, 9)
+        json_dict = sq.to_dictionary()
+        json_string = Base.to_json_string([json_dict])
+        self.assertEqual(json.loads(json_string), [{"id": 9, "y": 0,
+                                                    "size": 1, "x": 0}])
+
+    def test_to_json_None(self):
+        """
+            test to json None
+        """
+        json_string = Base.to_json_string(None)
+        self.assertEqual(json_string, "[]")
+
+    def test_to_json_empty(self):
+        """
+            test to_json Empty
+        """
+        json_string = Base.to_json_string([])
+        self.assertEqual(json_string, "[]")
