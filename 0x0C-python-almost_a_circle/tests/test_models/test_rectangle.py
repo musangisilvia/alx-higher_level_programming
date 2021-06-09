@@ -349,3 +349,64 @@ class TestRectangle(unittest.TestCase):
         r1.display()
         sys.stdout = sys.__stdout__
         self.assertEqual(capturedOutput.getvalue(), "\n\n\n\n   #\n   #\n")
+
+    def test_create_dict_equal(self):
+        """
+            Testing creating rectangle is not equal
+        """
+        r1 = Rectangle(1, 2, 3, 5, 6)
+        r1_dict = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dict)
+        self.assertNotEqual(r1, r2)
+
+    def test_create_dict_is(self):
+        """
+            Testing create rectangle is (r1 is r2)
+        """
+        r1 = Rectangle(1, 2, 3, 5, 6)
+        r1_dict = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dict)
+        self.assertIsNot(r1, r2)
+
+    def test_save_to_file_none(self):
+        """
+            Testing save to file none
+        """
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual(f.read(), '[]')
+
+    def test_save_to_file_empty(self):
+        """
+            Testing save to file empty list
+        """
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual(f.read(), '[]')
+
+    def test_save_to_file_rect(self):
+        """
+            Testing save to file with proper input
+        """
+        Rectangle.save_to_file([Rectangle(1, 2, 3, 4, 5)])
+        with open("Rectangle.json", "r") as f:
+            content = f.read()
+            self.assertEqual(json.loads(content), [{"id": 5,
+                                                    "width": 1, "height": 2,
+                                                    "x": 3, "y": 4}])
+
+    def test_save_to_file_noargs(self):
+        """
+            Testing save to file with no arguments
+        """
+        with self.assertRaises(TypeError):
+            Rectangle.save_to_file()
+
+    def test_save_to_file_type(self):
+        """
+            Testing save to file , format saved in
+        """
+        Rectangle.save_to_file([Rectangle(1, 2, 3, 4, 5)])
+        with open("Rectangle.json", "r") as f:
+            content = f.read()
+            self.assertEqual(str, type(content))
