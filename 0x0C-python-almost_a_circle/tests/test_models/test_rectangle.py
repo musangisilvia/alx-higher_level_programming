@@ -3,6 +3,8 @@
 """
 import json
 import unittest
+import sys
+from io import StringIO
 from models.rectangle import Rectangle
 
 
@@ -303,3 +305,47 @@ class TestRectangle(unittest.TestCase):
         """
         r1 = Rectangle(1, 2, 3, 4, 76)
         self.assertEqual("[Rectangle] (76) 3/4 - 1/2", r1.__str__())
+
+    def test_display_no_xy(self):
+        """
+            Testing the display() without x and y
+        """
+        capturedOutput = StringIO()
+        sys.stdout = capturedOutput
+        r1 = Rectangle(1, 2)
+        r1.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(capturedOutput.getvalue(), "#\n#\n")
+
+    def test_display_no_y(self):
+        """
+            Testing display() without y
+        """
+        capturedOutput = StringIO()
+        sys.stdout = capturedOutput
+        r1 = Rectangle(1, 2, 1)
+        r1.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(capturedOutput.getvalue(), " #\n #\n")
+
+    def test_display_no_x(self):
+        """
+            Testing display() without x
+        """
+        capturedOutput = StringIO()
+        sys.stdout = capturedOutput
+        r1 = Rectangle(1, 2, 0, 2)
+        r1.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(capturedOutput.getvalue(), "\n\n#\n#\n")
+
+    def test_display_xy(self):
+        """
+            Testing display() with x and y values
+        """
+        capturedOutput = StringIO()
+        sys.stdout = capturedOutput
+        r1 = Rectangle(1, 2, 3, 4)
+        r1.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(capturedOutput.getvalue(), "\n\n\n\n   #\n   #\n")
