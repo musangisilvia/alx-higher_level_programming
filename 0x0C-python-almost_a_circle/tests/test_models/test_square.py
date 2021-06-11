@@ -180,3 +180,37 @@ class TestSquare(unittest.TestCase):
         sq1 = Square(1)
         sq1.update(2, 4, **{'x': 3, 'y': 4})
         self.assertEqual(sq1.__str__(), "[Square] (2) 0/0 - 4")
+
+    def test_create_dict_equal(self):
+        """
+            Testing creating square is not equal
+        """
+        sq1 = Square(1, 3, 5, 6)
+        sq1_dict = sq1.to_dictionary()
+        sq2 = Square.create(**sq1_dict)
+        self.assertNotEqual(sq1, sq2)
+
+    def test_create_dict_is(self):
+        """
+            Testing create squaree is (sq1 is sq2)
+        """
+        sq1 = Square(1, 3, 5, 6)
+        sq1_dict = sq1.to_dictionary()
+        sq2 = Square.create(**sq1_dict)
+        self.assertIsNot(sq1, sq2)
+
+    def test_save_to_file_none(self):
+        """
+            Testing save to file none
+        """
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertEqual(f.read(), '[]')
+
+    def test_save_to_file_empty(self):
+        """
+            Testing save to file empty list
+        """
+        Square.save_to_file([])
+        with open("Square.json", "r") as f:
+            self.assertEqual(f.read(), '[]')
