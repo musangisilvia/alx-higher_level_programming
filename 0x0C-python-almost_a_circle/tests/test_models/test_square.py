@@ -247,8 +247,7 @@ class TestSquare(unittest.TestCase):
         """
             Testing load from file that doesnt exist
         """
-        try:
-            with open("Square.json", "r") as f:
-                Square.load_from_file()
-        except:
-            pass
+        sq1 = Square(1)
+        Square.save_to_file([sq1])
+        list_output = Square.load_from_file()
+        self.assertEqual(sq1.width, list_output[0].size)
