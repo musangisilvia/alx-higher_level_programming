@@ -3,6 +3,7 @@
 """
 
 import unittest
+import json
 from models.square import Square
 
 
@@ -214,3 +215,40 @@ class TestSquare(unittest.TestCase):
         Square.save_to_file([])
         with open("Square.json", "r") as f:
             self.assertEqual(f.read(), '[]')
+
+    def test_save_to_file_rect(self):
+        """
+            Testing save to file with proper input
+        """
+        Square.save_to_file([Square(1, 3, 4, 5)])
+        with open("Square.json", "r") as f:
+            content = f.read()
+            self.assertEqual(json.loads(content), [{"id": 5,
+                                                    "size": 1,
+                                                    "x": 3, "y": 4}])
+
+    def test_save_to_file_noargs(self):
+        """
+            Testing save to file with no arguments
+        """
+        with self.assertRaises(TypeError):
+            Square.save_to_file()
+
+    def test_save_to_file_type(self):
+        """
+            Testing save to file , format saved in
+        """
+        Square.save_to_file([Square(1, 3, 4, 5)])
+        with open("Square.json", "r") as f:
+            content = f.read()
+            self.assertEqual(str, type(content))
+
+    def test_load_from_file_noexist(self):
+        """
+            Testing load from file that doesnt exist
+        """
+        try:
+            with open("Square.json", "r") as f:
+                Square.load_from_file()
+        except:
+            pass
