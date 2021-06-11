@@ -156,3 +156,27 @@ class TestSquare(unittest.TestCase):
         """
         sq = Square(10, 2, 3, 9)
         self.assertEqual(sq.__str__(), "[Square] (9) 2/3 - 10")
+
+    def test_update(self):
+        """
+            Test update function with *args
+        """
+        sq1 = Square(1)
+        sq1.update(2, 4)
+        self.assertEqual(sq1.__str__(), "[Square] (2) 0/0 - 4")
+
+    def test_update_kwargs(self):
+        """
+            Test update() function with **kwargs
+        """
+        sq1 = Square(1)
+        sq1.update(size=7, y=1, id=12)
+        self.assertEqual(sq1.__str__(), "[Square] (12) 0/1 - 7")
+
+    def test_update_both(self):
+        """
+            Test update() with both args and kwargs
+        """
+        sq1 = Square(1)
+        sq1.update(2, 4, **{'x': 3, 'y': 4})
+        self.assertEqual(sq1.__str__(), "[Square] (2) 0/0 - 4")
