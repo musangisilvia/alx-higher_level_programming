@@ -8,27 +8,12 @@ from models.base import Base
 class Rectangle(Base):
     """
         class Rectangle implements Base.
-        Attributes:
-            __width (int)
-            __height (int)
-            __x (int)
-            __y (int)
         Methods:
             __init__()
-            width()
-            height()
-            x()
-            y()
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-            Initializes the class.
-            Args:
-                width (int): width of rectangle.
-                height (int): height of rectangle.
-                x (int)
-                y (int)
-                id (int): id of rectangle.
+            Initializes the instance of the class..
         """
         super().__init__(id)
         self.width = width

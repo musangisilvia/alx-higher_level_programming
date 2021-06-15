@@ -108,46 +108,36 @@ class Base:
         """
         fname = cls.__name__ + ".csv"
 
-        with open(fname, "w", newline='') as cfile:
-            writer = csv.writer(cfile)
-
-        if cls.__name__ == "Rectangle":
-            for obj in list_objs:
-                string = ""
-                obj = obj.to_dictionary()
-                string += (str(obj["id"]) + "," +
-                           str(obj["width"]) + "," +
-                           str(obj["height"]) + "," +
-                           str(obj["x"]) + "," +
-                           str(obj["y"]))
-                writer.writerow(string)
-
-        if cls.__name__ == "Square":
-            for obj in list_objs:
-                string = ""
-                obj = obj.to_dictionary()
-                string += (str(obj["id"]) + "," +
-                           str(obj["width"]) + "," +
-                           str(obj["x"]) + "," +
-                           str(obj["y"]))
-                writer.writerow(string)
+        if list_objs is None:
+            with open(fname, "w") as cfile:
+                cfile.write("[]")
+        else:
+            with open(fname, "w") as cfile:
+                writer = csv.writer(cfile)
+                for obj in list_objs:
+                    if cls.__name__ == "Rectangle":
+                        writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+                    if cls.__name__ == "Square":
+                        writer.writerow([obj.id, obj.width, obj.x, obj.y])
 
     @classmethod
     def load_from_file_csv(cls):
         """
             deserializes from CSV from a file.
         """
-        fname = cls.__name__ + ".json"
+        fname = cls.__name__ + ".csv"
 
-        try:
-            with open(fname, "r") as cfile:
-                reader = csv.reader(cfile)
-        except:
-            return []
+        with open(fname, "r") as cfile:
+            if cls.__name__ == "Rectangle":
+               reader = csv.DictReader(cfile, fieldnames={'id','width',
+                                                          'height', 'x', 'y'})
+            elif cls.__name__ == "Square":
+               reader = csv.DictReader(cfile, fieldnames={'id', 'size', 'x', 'y'})
 
-        instances = []
-        for instance in reader:
-            temp = cls.create(**instance)
-            instances.append(temp)
+            instances = []
+            for instance in reader:
+                instance = {x: int(y) for x, y in instance.items()}
+                temp = cls.create(**instance)
+                instances.append(temp)
 
         return instances
