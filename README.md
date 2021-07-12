@@ -69,7 +69,7 @@ There are several ways to presebt the output of a program ie In human-readable f
 While we've already encountered ``` print() ``` and ``` write() ```, there are functions that python offers that add to these. These functions work directly with either text or binary files.
 
 
-## 12. 0x0C-python-almost_a_circle
+## 13. 0x0C-python-almost_a_circle
 
 This project reviews everything about Python:
 
@@ -86,3 +86,9 @@ This project reviews everything about Python:
 	- args and kwargs
 	- Serialization/Deserialization
 	- JSON
+
+## 14. 0x0D-SQL_introduction
+
+SQL - Structured Query Language
+
+It is a data definition and manipulation language.
