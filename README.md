@@ -89,6 +89,25 @@ This project reviews everything about Python:
 
 ## 14. 0x0D-SQL_introduction
 
-SQL - Structured Query Language
-
-It is a data definition and manipulation language.
+SQL - Structured Query Language.
+MySQL is one of the major Database Management Systems available on open source.
+Concepts touched on include:
+* DDL and DML
+* RA
+* Functions
+* Queries
+* Subqueries
+* User Management on MySQL
+	- Creation of New Users
+	- Grant Permissions
+	- Revoke permissions
+	- Deletion of Users
+* Basic Query operations:
+	- Joins
+	- DISTINCT 
+	- Unions
+	- minus
+* Relational Database model design
+	- Design
+	- Normalization
+	- Entity Relationship Modeling
