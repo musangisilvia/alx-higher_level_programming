@@ -111,3 +111,24 @@ Concepts touched on include:
 	- Design
 	- Normalization
 	- Entity Relationship Modeling
+
+## 15. 0x12-javascript-warm_up
+
+JavaScript is a programming language that adds interactiviy to a website. It was invented by Brendan Eich (co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation).
+The concepts covered in this project are:
+* How to run JavaScript
+* Creating variables and constants
+* Difference between *var*, *let* and *const*
+* The datatypes available in JavaScript.
+* Control Structures: *if, if ... else *
+* Comments
+* Loops
+* Break and Continue Statements
+* Functions and how to use them, the different return values.
+* Scope of variables
+* Arithmetic Operators and how to use them.
+* Manipulate dictionary.
+* Import a file.
+
+
+
