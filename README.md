@@ -131,4 +131,15 @@ The concepts covered in this project are:
 * Import a file.
 
 
+## 16. 0x13-javascript_objects_scopes_closures
+
+This is a continuation of the JavaScript basics. Concepst practiced here are:
+* Creating an object in JavaScript.
+* *this* - what it means and how to use it.
+* *undefined* - what it means.
+* Variable type or scope
+* Closure
+* Prototype
+* Inheriting an object from another.
+
 
