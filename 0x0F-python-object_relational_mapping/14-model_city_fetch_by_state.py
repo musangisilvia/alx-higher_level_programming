@@ -14,8 +14,8 @@ from sqlalchemy import create_engine
 
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-                            sys.argv[1], sys.argv[2], sys.argv[3]),
-                            pool_pre_ping=True)
+                           sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
     Base.metadata.create_all(engine)
@@ -29,7 +29,7 @@ if __name__ == '__main__':
 
     # print all states
 
-    for city in cities:
-        print("{}: ({}) {}".format(city.State.name, city.City.id, city.City.name))
+    for ci in cities:
+        print("{}: ({}) {}".format(ci.State.name, ci.City.id, ci.City.name))
 
     session.close()
