@@ -23,8 +23,8 @@ Base.metadata.create_all(engine)
 session = Session()
 
 # extract all cities in a state
-cities = session.query(State, City).\
-         filter(State.id == City.state_id)
+cities = session.query(State, City) \
+                .filter(State.id == City.state_id)
 
 # print all states
 
