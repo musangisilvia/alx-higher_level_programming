@@ -174,3 +174,10 @@ session.close()
 
 However, the biggest difficulty with an ORM is the syntax. It differs from one ORM to another.
 
+## 18. 0x10-python-network_0
+
+This project describes some ways to use curl to debug.
+As well as :
+- HTTP
+- HTTP Cookies
+
