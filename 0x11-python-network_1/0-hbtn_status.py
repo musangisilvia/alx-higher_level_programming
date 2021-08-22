@@ -7,7 +7,7 @@
 import urllib.request
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     with urllib.request.urlopen('https://intranet.htbn.io/status') as resp:
         html = resp.read()
 
