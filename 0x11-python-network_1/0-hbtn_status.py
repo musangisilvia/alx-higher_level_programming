@@ -7,5 +7,11 @@
 import urllib.request
 
 
-with urllib.request.urlopen('https://intranet.htbn.io/status') as resp:
-    page = resp.read()
+if __name__ = "__main__":
+    with urllib.request.urlopen('https://intranet.htbn.io/status') as resp:
+        html = resp.read()
+
+    print("Body response:")
+    print("\t- type: {}".format(type(html)))
+    print("\t- content: {}".format(html))
+    print("\t- utf8 content: {}".format(html))
